@@ -1,0 +1,38 @@
+{
+   // 專案預設仍用 Sonnet；偶爾需要深度重構再手動切 Opus
+    //"defaultModel": "claude-3-sonnet-20240229", Pro好像都只能用sonnet 4...
+    "language": "zh-TW",
+    "claude.experimental.autoAcceptSuggestions": true,
+    // 明確告訴 Claude Code 專案的類型，可以幫助它在生成程式碼或分析結構時，使用更貼切的語言和工具。
+    "project": {
+      "name": "Claude Code 3-Day Course Development",
+      "type": "documentation",
+      "repository": "https://github.com/spyua/claudeCode-cutorial" 
+    },
+    "permissions": {
+        "allow": [
+        // 讓 Claude 能跑建置與 gh-pages 發佈
+        "Edit", // 允許 AI 編輯或建立任何檔案，這是您目前最核心的需求
+        "Bash(mkdir*)", // 允許 AI 建立資料夾 (例如 docs/labs)
+        "Bash(npm run *)", // 允許所有 npm run 指令，比單獨列出更靈活
+        "Bash(git *)", // 允許所有 git 指令，方便後續操作
+        "Bash(npm run build)",
+        "Bash(gh pages -d build*)",
+        "Bash(git push origin gh-pages*)"
+        ],
+        "deny": [
+        "Read(**/.env)",
+        "Read(**/*SECRET*)",
+        "Read(**/*.pem)",
+        "Read(**/service-account.json)"
+        ]
+    },
+    // 4. 編輯器整合：確保 AI 可以直接打開檔案到您的編輯器
+    "editor": {
+      "command": "code", // VS Code 的指令
+      "args": ["-r", "-g"]
+    },
+    // default 一旦剩餘 token 低於 8k 就自動 /clear
+    //"autoClearThreshold": 8000
+  }
+  

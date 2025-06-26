@@ -1,0 +1,6 @@
+# .serena/project.yml  ← 不要再放註解在欄位同一行，容易踩 YAML parsing
+name: claudeCode-cutorial        # 專案名稱
+language: typescript             # 只能填一個主要語言，關鍵字要用單數
+index_paths:                     # 要掃描語意索引的子目錄清單
+  - docs
+read_only: true                  # 只讀模式，AI 不會幫你改檔案

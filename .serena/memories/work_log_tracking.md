@@ -9,10 +9,10 @@
 
 ## 🎯 任務詳情
 ### 需求描述
-依據 Serena 指引，建立 module_01_tutorial.md 及相關教學素材、工具、參考資源。
+依據 Serena 指引，建立 module_01_tutorial.md 及相關教學素材、工具、參考資源，並逐步補齊詳細內容。
 
 ### 驗收標準
-- [ ] 主要教學文檔完整
+- [ ] 主要教學文檔完整（每一章節皆有具體內容）
 - [ ] 三組實驗素材齊全
 - [ ] 檢核工具與參考資源齊備
 - [ ] 內容新手友善、可重現
@@ -26,19 +26,21 @@
 - [x] 建立 module_01_materials/ - 2024-06-27 15:10
 - [x] 建立 module_01_tools/ - 2024-06-27 15:20
 - [x] 建立 module_01_reference/ - 2024-06-27 15:30
+- [x] 撰寫「安裝與啟動」教學內容 - 2024-06-27 16:00
 
-### 檢核階段
-- [ ] 自動品質檢查
-- [ ] Claude Code 審查
-- [ ] 人工最終確認
+### 待辦事項
+- [ ] 補齊核心概念詳細說明
+- [ ] 補齊三組實驗素材內容
+- [ ] 補充檢核工具與參考資源
+- [ ] 進行自動與人工品質檢查
 
 ## 📁 產出檔案清單
 | 檔案路徑 | 狀態 | 建立時間 | 最後修改 | 備註 |
 |---------|------|----------|----------|------|
-| tutorial-docs/module_01_tutorial.md | completed | 15:00 | 15:00 | 主要教學文檔 |
-| tutorial-docs/module_01_materials/ | completed | 15:10 | 15:10 | 實驗素材資料夾 |
-| tutorial-docs/module_01_tools/ | completed | 15:20 | 15:20 | 檢核工具資料夾 |
-| tutorial-docs/module_01_reference/ | completed | 15:30 | 15:30 | 快速參考資料夾 |
+| tutorial-docs/module_01_tutorial.md | in_progress | 15:00 | 16:00 | 主要教學文檔，已補「安裝與啟動」教學 |
+| tutorial-docs/module_01_materials/ | created | 15:10 | 15:10 | 實驗素材資料夾 |
+| tutorial-docs/module_01_tools/ | created | 15:20 | 15:20 | 檢核工具資料夾 |
+| tutorial-docs/module_01_reference/ | created | 15:30 | 15:30 | 快速參考資料夾 |
 
 ## 🔍 品質檢核紀錄
 ### 自動檢核結果
@@ -60,3 +62,4 @@
 [15:10] Cursor COMPLETED 建立 module_01_materials/ 及三組實驗資料夾
 [15:20] Cursor COMPLETED 建立 module_01_tools/ 檢核工具資料夾
 [15:30] Cursor COMPLETED 建立 module_01_reference/ 快速參考資料夾
+[16:00] Cursor IN_PROGRESS 補寫「安裝與啟動」教學內容

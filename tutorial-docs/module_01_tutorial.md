@@ -11,6 +11,50 @@
 ### 1. Claude Code 簡介
 - Anthropic AI 驅動的命令列開發工具，支援自然語言互動與程式設計輔助。
 
+## B-1. 安裝與啟動教學
+
+### 1. 系統需求
+- **作業系統**：macOS 10.15+、Ubuntu 20.04+/Debian 10+，或 Windows（需 WSL）
+- **硬體**：至少 4GB RAM
+- **軟體**：Node.js 18+，建議安裝 git
+- **網路**：需可連線網際網路
+- **地區**：僅支援官方公告地區
+
+### 2. 安裝步驟
+1. 安裝 Node.js 18+（[官方下載](https://nodejs.org/en/download)）
+2. 開啟終端機，執行：
+   ```sh
+   npm install -g @anthropic-ai/claude-code
+   ```
+   > **注意**：請勿使用 `sudo npm install -g`，如遇權限錯誤，請參考官方[疑難排解](../official-reference/build-with-claude/05.troubleshooting.md)
+
+### 3. 啟動與驗證
+1. 切換到你的專案目錄：
+   ```sh
+   cd your-project-directory
+   ```
+2. 啟動 Claude Code：
+   ```sh
+   claude
+   ```
+3. 依畫面指示完成 OAuth 驗證，可選擇 Anthropic Console 或 Claude App 方案
+
+### 4. 問題排解（WSL 常見狀況）
+- 若安裝時出現平台偵測錯誤：
+  ```sh
+  npm config set os linux
+  npm install -g @anthropic-ai/claude-code --force --no-os-check
+  ```
+- 若出現 `node: not found`，請確認 node/npm 路徑為 Linux 版本（/usr/ 開頭），建議用 nvm 安裝
+
+### 5. 啟動後測試
+- 執行 `claude --version` 檢查版本
+- 啟動後可嘗試：
+  - `summarize this project`
+  - `/help`
+
+> 詳細安裝與疑難排解請參考 [官方文件](../official-reference/getting-started/02.set-up-claude-code.md)
+
 ### 2. 系統架構與安全性
 - 直接連接 Anthropic API，強調隱私與安全設計。
 
